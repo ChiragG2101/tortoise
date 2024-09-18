@@ -61,7 +61,7 @@ const NormalSection = ({ data }: { data: TData }) => {
             </div>
             <div>
               <p className="font-semibold text-sm">{data.device.name}</p>
-              <p className="text-[12px] font-medium text-[#4B4B4B]/60">
+              <p className="text-xs font-medium text-[#4B4B4B]/60">
                 128 GB • Black
               </p>
             </div>

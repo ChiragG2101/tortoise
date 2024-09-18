@@ -17,7 +17,7 @@ const MiniCard = ({
   return (
     <div className={className}>
       <Icon size={24} weight="fill" className={cn("shrink-0", iconCn)} />
-      <p className="text-[12px] opacity-60 font-medium mt-1">{title}</p>
+      <p className="text-xs opacity-60 font-medium mt-[3px]">{title}</p>
       <p className=" text-[16px] font-semibold">{value}</p>
     </div>
   );

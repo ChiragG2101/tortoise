@@ -23,14 +23,14 @@ const ClaimDetails = ({ data }: { data: TData }) => {
             </div>
             <div className="">
               <p className="font-semibold text-sm">{data.employee.name}</p>
-              <p className="text-[12px] font-medium text-[#4B4B4B]/60">
+              <p className="text-xs font-medium text-[#4B4B4B]/60">
                 {data.employee.designation}
               </p>
             </div>
           </div>
           <div>
             <p className="font-medium text-sm">{timeAgo(data.requestedOn)}</p>
-            <p className="text-[12px] text-[#4B4B4B]/60 font-medium">
+            <p className="text-xs text-[#4B4B4B]/60 font-medium">
               {data.requestedOn.getDate()}th{" "}
               {data.requestedOn.toLocaleString("default", { month: "long" })}{" "}
               {data.requestedOn.getFullYear()}

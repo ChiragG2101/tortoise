@@ -3,11 +3,11 @@ import React from "react";
 
 const Invoice = () => {
   return (
-    <div className="flex flex-col gap-1">
+    <div className="flex flex-col gap-1 text-sm">
       <div className="flex items-center justify-between gap-2">
         <div className="flex gap-2 items-center text-sm text-secondary-foreground">
           <CalendarBlank size={24} weight="fill" className="text-[#FF91EE]" />
-          <p className=" font-medium ">Monthly instalment amount</p>
+          <p className=" font-medium ">Monthly installment amount</p>
         </div>
         <p className="font-semibold ">₹13,416</p>
       </div>

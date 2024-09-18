@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 
+// General Purpose components which can be utilized across all other components
 export function SectionTitle({ title }: { title: string }) {
   return (
     <div className="text-sm font-semibold text-secondary-foreground">

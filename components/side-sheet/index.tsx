@@ -8,6 +8,7 @@ import PaymentBreakdown from "./payment-breakdown";
 import Documents from "./documents";
 import ClaimDetails from "./claim-details";
 import ApproveClaim from "./approve-claim";
+import { SectionTitle } from "./lib";
 
 const SideSheet = ({
   data,
@@ -24,21 +25,23 @@ const SideSheet = ({
       <div className="flex justify-between p-4 px-8 bg-secondary-background rounded-l-xl">
         <div className="flex">
           <button
-            className="p-1 border rounded-l-lg"
+            className="p-1 border rounded-l-lg select-none"
+            autoFocus={false}
             onClick={() => setIsOpen(false)}
           >
-            <CaretLeft size={16} />
+            <CaretLeft size={14} />
           </button>
           <button
             className="p-1 border rounded-r-lg"
             onClick={() => setIsOpen(false)}
           >
-            <CaretRight size={16} />
+            <CaretRight size={14} />
           </button>
         </div>
-        <p className="font-semibold">
-          {extractFirstName(data.employee.name)}&apos;s Claim
-        </p>
+        <SectionTitle
+          title={`${extractFirstName(data.employee.name)}'s Claim`}
+        />
+
         <button
           className="p-1 border rounded-lg"
           onClick={() => setIsOpen(false)}
@@ -56,7 +59,7 @@ const SideSheet = ({
           <ClaimDetails data={data} />
         </TabsContent>
         <TabsContent value="breakdown">
-          <PaymentBreakdown />
+          <PaymentBreakdown data={data} />
         </TabsContent>
         <TabsContent value="documents">
           <Documents data={data} />
