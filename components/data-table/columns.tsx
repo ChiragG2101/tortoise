@@ -1,6 +1,6 @@
 "use client";
 
-import { Data } from "@/types/data";
+import { TData } from "@/types/data";
 import type { ColumnDef } from "@tanstack/react-table";
 import Image from "next/image";
 import { Button } from "../ui/button";
@@ -8,9 +8,10 @@ import { CaretDown, CheckCircle } from "@phosphor-icons/react";
 import { AArrowDownIcon, AArrowUpIcon, ChevronRight } from "lucide-react";
 import { timeAgo } from "@/lib/utils";
 
-export const columns: ColumnDef<Data>[] = [
+export const columns: ColumnDef<TData>[] = [
   {
     accessorKey: "employee",
+    enableSorting: true,
     header: ({ column }) => {
       return (
         <div
@@ -27,7 +28,7 @@ export const columns: ColumnDef<Data>[] = [
       );
     },
     cell: ({ getValue }) => {
-      const { name, designation, image } = getValue() as Data["employee"];
+      const { name, designation, image } = getValue() as TData["employee"];
       return (
         <div className="py-2 ms-5 flex items-center gap-2">
           <Image
@@ -50,6 +51,7 @@ export const columns: ColumnDef<Data>[] = [
   },
   {
     accessorKey: "device",
+    enableSorting: true,
     header: ({ column }) => {
       return (
         <div
@@ -66,7 +68,7 @@ export const columns: ColumnDef<Data>[] = [
       );
     },
     cell: ({ getValue }) => {
-      const { name, image, description } = getValue() as Data["device"];
+      const { name, image, description } = getValue() as TData["device"];
       return (
         <div className="flex items-center gap-3">
           <Image
@@ -88,6 +90,8 @@ export const columns: ColumnDef<Data>[] = [
   },
   {
     accessorKey: "requestedOn",
+    enableSorting: true,
+
     header: ({ column }) => {
       return (
         <div
@@ -104,7 +108,7 @@ export const columns: ColumnDef<Data>[] = [
       );
     },
     cell: ({ getValue }) => {
-      const date = new Date(getValue() as Data["requestedOn"]);
+      const date = new Date(getValue() as TData["requestedOn"]);
       return (
         <div className="space-y-1">
           <p className="font-medium">{timeAgo(date)}</p>
@@ -121,7 +125,7 @@ export const columns: ColumnDef<Data>[] = [
     accessorKey: "amountPayable",
     header: "Amount Payable",
     cell: ({ getValue }) => {
-      const { value, description } = getValue() as Data["amountPayable"];
+      const { value, description } = getValue() as TData["amountPayable"];
       return (
         <div className="space-y-1">
           <p className="font-medium">{value}</p>

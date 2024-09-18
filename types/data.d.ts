@@ -1,4 +1,4 @@
-export type Data = {
+export type TData = {
   id: string;
   employee: {
     name: string;

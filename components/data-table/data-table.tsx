@@ -20,6 +20,8 @@ import {
 } from "@/components/ui/table";
 import { useState } from "react";
 import Pagination from "./pagination";
+import { Sheet } from "../ui/sheet";
+import SideSheet from "../side-sheet";
 
 interface DataTableProps<TData, TValue> {
   columns: ColumnDef<TData, TValue>[];
@@ -31,6 +33,8 @@ export function DataTable<TData, TValue>({
   data,
 }: DataTableProps<TData, TValue>) {
   const [sorting, setSorting] = useState<SortingState>([]);
+  const [selectedRowId, setSelectedRowId] = useState<string | null>(null);
+  const [isOpen, setIsOpen] = useState(false);
 
   const table = useReactTable({
     data,
@@ -45,7 +49,7 @@ export function DataTable<TData, TValue>({
   });
 
   return (
-    <div>
+    <Sheet open={isOpen}>
       <div className="rounded-xl border">
         <Table>
           <TableHeader>
@@ -75,6 +79,12 @@ export function DataTable<TData, TValue>({
                 <TableRow
                   key={row.id}
                   data-state={row.getIsSelected() && "selected"}
+                  onClick={() => {
+                    // @ts-expect-error Typescript issues
+                    setSelectedRowId(row.original.id);
+                    setIsOpen(true);
+                  }}
+                  className="cursor-pointer hover:bg-gray-100 transition-colors duration-200 ease-in-out"
                 >
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id}>
@@ -100,6 +110,13 @@ export function DataTable<TData, TValue>({
         </Table>
       </div>
       <Pagination table={table} />
-    </div>
+      {selectedRowId && (
+        <SideSheet
+          // @ts-expect-error Typescript issues
+          data={data.find((row) => row.id === selectedRowId)}
+          setIsOpen={setIsOpen}
+        />
+      )}
+    </Sheet>
   );
 }

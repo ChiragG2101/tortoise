@@ -26,3 +26,22 @@ export function timeAgo(date: Date): string {
 
   return `${Math.floor(seconds)} Seconds ago`;
 }
+
+export function extractFirstName(fullName: string): string {
+  if (!fullName) return "";
+  const names = fullName.trim().split(" ");
+  return names[0];
+}
+
+export function extractNumericalValue(value: string): number {
+  // Use a regular expression to extract digits and commas
+  const numericalPart = value.match(/\d{1,3}(,\d{3})*(\.\d+)?/);
+
+  if (numericalPart) {
+    // Remove commas and convert to number
+    return parseInt(numericalPart[0].replace(/,/g, ""), 10);
+  }
+
+  // Return 0 if no numerical part is found
+  return 0;
+}

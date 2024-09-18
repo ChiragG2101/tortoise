@@ -1,6 +1,6 @@
-import { Data } from "@/types/data";
+import { TData } from "@/types/data";
 
-export const dataSet: Data[] = [
+export const dataSet: TData[] = [
   {
     id: "1",
     employee: {

@@ -20,7 +20,7 @@ const buttonVariants = cva(
           "hover:bg-neutral-100 hover:text-neutral-900 dark:hover:bg-neutral-800 dark:hover:text-neutral-50",
         link: "text-neutral-900 underline-offset-4 hover:underline dark:text-neutral-50",
         pagination:
-          " p-1 bg-secondary-background text-secondary-foreground focus-visible:bg-[#323232] focus-visible:text-white focus-visible:shadow-none focus-visible:ring-none focus-visible:offset-none",
+          " p-1 bg-secondary-background text-secondary-foreground disabled:bg-[#323232] disabled:text-white disabled:shadow-none disabled:ring-none disabled:offset-none disabled:opacity-100",
       },
       size: {
         default: "h-9 px-4 py-2",
