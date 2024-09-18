@@ -32,11 +32,11 @@ const NormalSection = ({ data }: { data: TData }) => {
 
         <div className="mt-2 p-4 rounded-xl flex items-center gap-3 bg-secondary/50 ">
           <SealWarning
-            size={25}
+            size={20}
             weight="fill"
             className="self-start  text-[#CBCBCB] shrink-0"
           />
-          <p className="text-sm text-[#4B4B4B]">
+          <p className="text-xs text-[#4B4B4B]">
             <strong>
               ₹ {extractNumericalValue(data.amountPayable.value)} to be deducted
             </strong>{" "}

@@ -15,7 +15,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2024-02-15"),
     amountPayable: {
-      value: "Rs. 13,416 / month",
+      value: "₹ 13,416 / month",
       description: "For 6 months",
     },
   },
@@ -33,7 +33,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2024-05-22"),
     amountPayable: {
-      value: "Rs. 21,800 / month",
+      value: "₹ 21,800 / month",
       description: "For 12 months",
     },
   },
@@ -51,7 +51,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2023-11-05"),
     amountPayable: {
-      value: "Rs. 12,000 / month",
+      value: "₹ 12,000 / month",
       description: "For 8 months",
     },
   },
@@ -69,7 +69,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2023-12-01"),
     amountPayable: {
-      value: "Rs. 15,600 / month",
+      value: "₹ 15,600 / month",
       description: "For 10 months",
     },
   },
@@ -87,7 +87,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2024-07-10"),
     amountPayable: {
-      value: "Rs. 19,500 / month",
+      value: "₹ 19,500 / month",
       description: "For 9 months",
     },
   },
@@ -105,7 +105,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2024-03-18"),
     amountPayable: {
-      value: "Rs. 10,800 / month",
+      value: "₹ 10,800 / month",
       description: "For 12 months",
     },
   },
@@ -123,7 +123,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2023-09-29"),
     amountPayable: {
-      value: "Rs. 9,000 / month",
+      value: "₹ 9,000 / month",
       description: "For 5 months",
     },
   },
@@ -141,7 +141,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2024-01-25"),
     amountPayable: {
-      value: "Rs. 11,500 / month",
+      value: "₹ 11,500 / month",
       description: "For 6 months",
     },
   },
@@ -159,7 +159,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2024-06-12"),
     amountPayable: {
-      value: "Rs. 22,000 / month",
+      value: "₹ 22,000 / month",
       description: "For 12 months",
     },
   },
@@ -177,7 +177,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2023-08-15"),
     amountPayable: {
-      value: "Rs. 25,000 / month",
+      value: "₹ 25,000 / month",
       description: "For 8 months",
     },
   },
@@ -195,7 +195,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2023-09-10"),
     amountPayable: {
-      value: "Rs. 18,000 / month",
+      value: "₹ 18,000 / month",
       description: "For 12 months",
     },
   },
@@ -213,7 +213,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2024-01-05"),
     amountPayable: {
-      value: "Rs. 14,200 / month",
+      value: "₹ 14,200 / month",
       description: "For 6 months",
     },
   },
@@ -231,7 +231,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2023-07-22"),
     amountPayable: {
-      value: "Rs. 22,500 / month",
+      value: "₹ 22,500 / month",
       description: "For 10 months",
     },
   },
@@ -249,7 +249,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2023-11-17"),
     amountPayable: {
-      value: "Rs. 16,800 / month",
+      value: "₹ 16,800 / month",
       description: "For 9 months",
     },
   },
@@ -267,7 +267,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2024-03-02"),
     amountPayable: {
-      value: "Rs. 19,400 / month",
+      value: "₹ 19,400 / month",
       description: "For 7 months",
     },
   },
@@ -285,7 +285,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2023-12-12"),
     amountPayable: {
-      value: "Rs. 24,500 / month",
+      value: "₹ 24,500 / month",
       description: "For 10 months",
     },
   },
@@ -303,7 +303,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2023-10-04"),
     amountPayable: {
-      value: "Rs. 20,000 / month",
+      value: "₹ 20,000 / month",
       description: "For 6 months",
     },
   },
@@ -321,7 +321,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2024-04-14"),
     amountPayable: {
-      value: "Rs. 12,600 / month",
+      value: "₹ 12,600 / month",
       description: "For 5 months",
     },
   },
@@ -339,7 +339,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2024-05-08"),
     amountPayable: {
-      value: "Rs. 11,000 / month",
+      value: "₹ 11,000 / month",
       description: "For 4 months",
     },
   },
@@ -357,7 +357,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2023-06-19"),
     amountPayable: {
-      value: "Rs. 23,400 / month",
+      value: "₹ 23,400 / month",
       description: "For 9 months",
     },
   },
@@ -375,7 +375,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2024-01-27"),
     amountPayable: {
-      value: "Rs. 20,800 / month",
+      value: "₹ 20,800 / month",
       description: "For 11 months",
     },
   },
@@ -393,7 +393,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2023-09-30"),
     amountPayable: {
-      value: "Rs. 18,600 / month",
+      value: "₹ 18,600 / month",
       description: "For 8 months",
     },
   },
@@ -411,7 +411,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2024-02-18"),
     amountPayable: {
-      value: "Rs. 15,500 / month",
+      value: "₹ 15,500 / month",
       description: "For 10 months",
     },
   },
@@ -429,7 +429,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2023-08-11"),
     amountPayable: {
-      value: "Rs. 13,700 / month",
+      value: "₹ 13,700 / month",
       description: "For 6 months",
     },
   },
@@ -447,7 +447,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2023-07-25"),
     amountPayable: {
-      value: "Rs. 12,800 / month",
+      value: "₹ 12,800 / month",
       description: "For 4 months",
     },
   },
@@ -465,7 +465,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2023-05-09"),
     amountPayable: {
-      value: "Rs. 26,000 / month",
+      value: "₹ 26,000 / month",
       description: "For 12 months",
     },
   },
@@ -483,7 +483,7 @@ export const dataSet: TData[] = [
     },
     requestedOn: new Date("2024-03-20"),
     amountPayable: {
-      value: "Rs. 17,000 / month",
+      value: "₹ 17,000 / month",
       description: "For 9 months",
     },
   },
