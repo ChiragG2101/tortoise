@@ -24,7 +24,7 @@ const Pagination = <TData,>({ table }: PaginationProps<TData>) => {
           onClick={() => table.previousPage()}
           disabled={!table.getCanPreviousPage()}
         >
-          <ChevronLeft />
+          <ChevronLeft className="text-[#CBCBCB]" />
         </button>
         {pageNumbers.map((pageNumber) => (
           <Button
@@ -41,7 +41,7 @@ const Pagination = <TData,>({ table }: PaginationProps<TData>) => {
           onClick={() => table.nextPage()}
           disabled={!table.getCanNextPage()}
         >
-          <ChevronRight />
+          <ChevronRight className="text-[#CBCBCB]" />
         </button>
       </div>
     </div>

@@ -27,7 +27,7 @@ const DataCard = ({
     >
       <div className="space-y-2">
         <Icon weight="duotone" size={28} />
-        <h5 className="font-semibold">{title}</h5>
+        <h5 className="font-semibold text-sm">{title}</h5>
       </div>
       <p className="text-2xl">{value}</p>
     </Link>

@@ -17,7 +17,7 @@ export default function Table() {
           </div>
           <Input
             placeholder={"Search by name"}
-            className={cn("ps-10 border-none ")}
+            className={cn("ps-10 border-none text-sm")}
             name="search"
           />
         </div>

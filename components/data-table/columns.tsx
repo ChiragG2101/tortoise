@@ -8,6 +8,7 @@ import { CaretDown, CheckCircle } from "@phosphor-icons/react";
 import { AArrowDownIcon, AArrowUpIcon, ChevronRight } from "lucide-react";
 import { timeAgo } from "@/lib/utils";
 
+// Column definitions for the table including header, cell, sorting, etc.
 export const columns: ColumnDef<TData>[] = [
   {
     accessorKey: "employee",
@@ -40,8 +41,8 @@ export const columns: ColumnDef<TData>[] = [
           />
 
           <div>
-            <p className="font-semibold">{name}</p>
-            <p className="text-sm text-[#4B4B4B]/60 font-medium">
+            <p className="text-sm font-semibold">{name}</p>
+            <p className="text-xs text-[#4B4B4B]/60 font-medium">
               {designation}
             </p>
           </div>
@@ -79,8 +80,8 @@ export const columns: ColumnDef<TData>[] = [
             className="rounded-full"
           />
           <div>
-            <p className="font-medium">{name}</p>
-            <p className="text-sm text-[#4B4B4B]/60 font-medium">
+            <p className="text-sm font-medium">{name}</p>
+            <p className="text-xs text-[#4B4B4B]/60 font-medium">
               {description}
             </p>
           </div>
@@ -110,9 +111,9 @@ export const columns: ColumnDef<TData>[] = [
     cell: ({ getValue }) => {
       const date = new Date(getValue() as TData["requestedOn"]);
       return (
-        <div className="space-y-1">
-          <p className="font-medium">{timeAgo(date)}</p>
-          <p className="text-sm text-[#4B4B4B]/60 font-medium">
+        <div className="">
+          <p className="font-medium text-sm">{timeAgo(date)}</p>
+          <p className="text-xs text-[#4B4B4B]/60 font-medium">
             {date.getDate()}th{" "}
             {date.toLocaleString("default", { month: "long" })}{" "}
             {date.getFullYear()}
@@ -127,9 +128,9 @@ export const columns: ColumnDef<TData>[] = [
     cell: ({ getValue }) => {
       const { value, description } = getValue() as TData["amountPayable"];
       return (
-        <div className="space-y-1">
-          <p className="font-medium">{value}</p>
-          <p className="text-sm text-[#4B4B4B]/60 font-medium">{description}</p>
+        <div className="">
+          <p className="text-sm font-medium">{value}</p>
+          <p className="text-xs text-[#4B4B4B]/60 font-medium">{description}</p>
         </div>
       );
     },
@@ -138,7 +139,7 @@ export const columns: ColumnDef<TData>[] = [
     id: "Actions",
     cell: ({}) => {
       return (
-        <Button className="flex items-center gap-2 bg-white text-primary border">
+        <Button className="flex items-center gap-2 bg-white text-[#4B4B4B] border">
           <CheckCircle size={15} weight="fill" fill="#16AF8E" /> Approve
           <div className="w-px h-full bg-secondary"></div>
           <CaretDown size={15} className="text-secondary" />

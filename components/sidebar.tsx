@@ -95,7 +95,7 @@ const Sidebar = () => {
         ))}
       </div>
       <hr className="border" />
-      <div className="space-y-5 pl-4">
+      <div className="space-y-4 pl-4">
         {updatedURLs.map((url, index) => (
           <Link key={index} href={url.href} className="flex items-center gap-3">
             <url.icon weight="duotone" size={28} />
