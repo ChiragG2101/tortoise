@@ -25,7 +25,7 @@ const SideSheet = ({
       <div className="flex justify-between p-4 px-8 bg-secondary-background rounded-l-xl">
         <div className="flex">
           <button
-            className="p-1 border rounded-l-lg select-none"
+            className="p-1 border rounded-l-lg outline-none"
             autoFocus={false}
             onClick={() => setIsOpen(false)}
           >

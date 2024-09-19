@@ -10,15 +10,8 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default: "bg-primary text-white shadow hover:opacity-90 ",
-        destructive:
-          "bg-red-500 text-neutral-50 shadow-sm hover:bg-red-500/90 dark:bg-red-900 dark:text-neutral-50 dark:hover:bg-red-900/90",
-        outline:
-          "border border-neutral-200 bg-white shadow-sm hover:bg-neutral-100 hover:text-neutral-900 dark:border-neutral-800 dark:bg-neutral-950 dark:hover:bg-neutral-800 dark:hover:text-neutral-50",
         secondary:
           "bg-secondary-background text-secondary-foreground font-semibold shadow-sm hover:opacity-80 disabled:opacity-50",
-        ghost:
-          "hover:bg-neutral-100 hover:text-neutral-900 dark:hover:bg-neutral-800 dark:hover:text-neutral-50",
-        link: "text-neutral-900 underline-offset-4 hover:underline dark:text-neutral-50",
         pagination:
           " p-1 bg-secondary-background text-secondary-foreground disabled:bg-[#323232] disabled:text-white disabled:shadow-none disabled:ring-none disabled:offset-none disabled:opacity-100",
       },
