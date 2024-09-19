@@ -1,3 +1,4 @@
+"use client";
 import { columns } from "./columns";
 import { DataTable } from "./data-table";
 import { dataSet } from "./data";
@@ -6,8 +7,35 @@ import { cn } from "@/lib/utils";
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { Button } from "../ui/button";
 import { Funnel, ListChecks } from "@phosphor-icons/react/dist/ssr";
+import {
+  ColumnFiltersState,
+  getCoreRowModel,
+  getFilteredRowModel,
+  getPaginationRowModel,
+  getSortedRowModel,
+  SortingState,
+  useReactTable,
+} from "@tanstack/react-table";
+import { useState } from "react";
 
 export default function Table() {
+  const [sorting, setSorting] = useState<SortingState>([]);
+  const [columnFilters, setColumnFilters] = useState<ColumnFiltersState>([]);
+
+  const table = useReactTable({
+    data: dataSet,
+    columns,
+    getCoreRowModel: getCoreRowModel(),
+    onSortingChange: setSorting,
+    getSortedRowModel: getSortedRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
+    onColumnFiltersChange: setColumnFilters,
+    getFilteredRowModel: getFilteredRowModel(),
+    state: {
+      sorting,
+      columnFilters,
+    },
+  });
   return (
     <div className="p-10 flex flex-col gap-3">
       <div className="flex justify-between">
@@ -19,6 +47,12 @@ export default function Table() {
             placeholder={"Search by name"}
             className={cn("ps-10 border-none text-sm")}
             name="search"
+            value={
+              (table.getColumn("employee")?.getFilterValue() as string) ?? ""
+            }
+            onChange={(event) =>
+              table.getColumn("employee")?.setFilterValue(event.target.value)
+            }
           />
         </div>
         <div className="flex gap-2">
@@ -36,7 +70,7 @@ export default function Table() {
           </Button>
         </div>
       </div>
-      <DataTable columns={columns} data={dataSet} />
+      <DataTable table={table} data={dataSet} />
     </div>
   );
 }

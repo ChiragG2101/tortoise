@@ -1,14 +1,6 @@
 "use client";
 
-import {
-  ColumnDef,
-  flexRender,
-  getCoreRowModel,
-  getPaginationRowModel,
-  getSortedRowModel,
-  SortingState,
-  useReactTable,
-} from "@tanstack/react-table";
+import { flexRender, Table as T } from "@tanstack/react-table";
 
 import {
   Table,
@@ -22,31 +14,16 @@ import { useState } from "react";
 import Pagination from "./pagination";
 import { Sheet } from "../ui/sheet";
 import SideSheet from "../side-sheet";
+import { columns } from "./columns";
 
-interface DataTableProps<TData, TValue> {
-  columns: ColumnDef<TData, TValue>[];
+interface DataTableProps<TData> {
+  table: T<TData>;
   data: TData[];
 }
 
-export function DataTable<TData, TValue>({
-  columns,
-  data,
-}: DataTableProps<TData, TValue>) {
-  const [sorting, setSorting] = useState<SortingState>([]);
+export function DataTable<TData>({ table, data }: DataTableProps<TData>) {
   const [selectedRowId, setSelectedRowId] = useState<string | null>(null);
   const [isOpen, setIsOpen] = useState(false);
-
-  const table = useReactTable({
-    data,
-    columns,
-    getCoreRowModel: getCoreRowModel(),
-    onSortingChange: setSorting,
-    getSortedRowModel: getSortedRowModel(),
-    getPaginationRowModel: getPaginationRowModel(),
-    state: {
-      sorting,
-    },
-  });
 
   return (
     <Sheet open={isOpen}>

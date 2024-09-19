@@ -49,6 +49,10 @@ export const columns: ColumnDef<TData>[] = [
         </div>
       );
     },
+    filterFn: (row, columnId, filterValue) => {
+      const employee = row.getValue(columnId) as TData["employee"];
+      return employee.name.toLowerCase().includes(filterValue.toLowerCase());
+    },
   },
   {
     accessorKey: "device",
